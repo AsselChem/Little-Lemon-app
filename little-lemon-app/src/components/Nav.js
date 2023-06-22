@@ -1,17 +1,29 @@
-const Nav = () =>{
+import React from "react";
+import { Link } from "react-router-dom";
+import image1 from "../images/image1.png";
+import "./Nav.css";
+
+function Nav() {
     return (
-        <Nav>
+        <nav>
+            <Link to ="/">
+                <img src={image1} alt = "Little Lemon Logo"  width="214" height="70"/>
+            </Link>
             <ul>
                 <li>
-                    <a href='Main'>Main</a>
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <a href ='Header'>Header</a>
+                    <a href='#info'>Info</a>
                 </li>
                 <li>
-                    <a href ='Footer'>Footer</a>
+                    <a href ='/booking'>Booking</a>
+                </li>
+                <li>
+                    <a href ='#contacs'>Contacts</a>
                 </li>
             </ul>
-        </Nav>
+        </nav>
     )
 }
+export default Nav
